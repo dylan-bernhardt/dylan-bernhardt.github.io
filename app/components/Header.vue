@@ -1,12 +1,47 @@
 <template>
   <div
-    class="fixed p-4 top-0 w-screen flex bg-gray-100 dark:bg-gray-950 justify-center gap-3">
+    class="px-4 py-2 w-fit flex justify-center gap-3 dark:bg-gray-900 bg-gray-400/30 rounded-xl">
+    <NuxtLink
+      to="/"
+      class="p-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+      <svg
+        class="w-5 h-5 fill-white dark:fill-gray-100"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <g id="style=fill" clip-path="url(#clip0_1_133)">
+            <g id="home-door">
+              <path
+                id="Subtract"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M14.469 2.16334C13.0553 0.926673 10.9447 0.926672 9.53099 2.16334L2.87259 7.98786C1.84148 8.88984 1.25 10.1931 1.25 11.563L1.25 20C1.25 22.0711 2.92893 23.75 5 23.75L19 23.75C21.0711 23.75 22.75 22.0711 22.75 20L22.75 11.563C22.75 10.1931 22.1585 8.88984 21.1274 7.98786L14.469 2.16334ZM11.25 19C11.25 19.4142 11.5858 19.75 12 19.75C12.4142 19.75 12.75 19.4142 12.75 19L12.75 16C12.75 15.5858 12.4142 15.25 12 15.25C11.5858 15.25 11.25 15.5858 11.25 16L11.25 19Z"></path>
+            </g>
+          </g>
+          <defs>
+            <clipPath id="clip0_1_133">
+              <rect
+                width="24"
+                height="24"
+                transform="translate(0 24) rotate(-90)"></rect>
+            </clipPath>
+          </defs>
+        </g>
+      </svg>
+    </NuxtLink>
+
     <ThemeSwitcher></ThemeSwitcher>
     <a
       href="https://github.com/dylan-bernhardt"
       class="p-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
       <svg
-        class="w-5 h-5 fill-gray-400 dark:fill-gray-100"
+        class="w-5 h-5 fill-white dark:fill-gray-100"
         viewBox="0 0 32 32"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +62,7 @@
       href="https://www.linkedin.com/in/dylan-bernhardt-b5a372251"
       class="p-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
       <svg
-        class="w-5 h-5 fill-gray-400 dark:fill-gray-100"
+        class="w-5 h-5 fill-white dark:fill-gray-100"
         height="200px"
         width="200px"
         version="1.1"

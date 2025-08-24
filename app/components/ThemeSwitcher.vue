@@ -21,7 +21,7 @@
 
     <svg
       v-if="isDarkModeEnabled === false"
-      class="w-5 h-5 fill-gray-400 stroke-gray-400"
+      class="w-5 h-5 fill-white stroke-white"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
