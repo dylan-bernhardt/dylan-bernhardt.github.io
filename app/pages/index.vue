@@ -69,7 +69,7 @@
           </button>
         </a>
         <div>
-          <nuxt-link to="projects">
+          <nuxt-link to="/">
             <button
               class="w-full rounded-md flex px-4 py-2 text-gray-200 bg-gray-400 dark:bg-gray-600 hover:bg-gray-500 dark:hover:bg-gray-800 cursor-pointer shadow text-nowrap">
               My projects
