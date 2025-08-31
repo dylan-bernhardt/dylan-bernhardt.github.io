@@ -1,11 +1,11 @@
 <template>
-  <div class="flex flex-col gap-4 items-center">
+  <div class="flex flex-col gap-2 items-center">
     <div
-      class="rounded-full overflow-hidden w-16 h-16 flex items-center justify-center">
+      class="rounded-full overflow-hidden w-20 h-20 flex items-center justify-center">
       <NuxtImg class="w-full h-full" src="./me.jpg" alt="" />
     </div>
-    <span class="text-gray-800 dark:text-gray-100 font-medium">
-      Hi, my name is Dylan.
+    <span class="text-gray-800 dark:text-gray-100 font-semibold text-xl mt-4">
+      Hi, I'm Dylan
     </span>
 
     <div class="flex items-center gap-2">
@@ -35,8 +35,7 @@
         </g>
       </svg>
 
-      <span
-        class="text-sm font-semibold tracking-wider text-gray-600 dark:text-gray-400">
+      <span class="text-base font-medium text-gray-600 dark:text-gray-400">
         Strasbourg
       </span>
     </div>

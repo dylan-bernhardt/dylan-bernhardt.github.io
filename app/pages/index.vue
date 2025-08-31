@@ -1,8 +1,28 @@
 <template>
   <div
-    class="bg-gray-200 dark:bg-gray-950 min-h-screen w-screen max-w-screen overflow-hidden px-8 sm:px-4">
+    class="bg-white dark:bg-gray-950 h-screen w-screen max-w-screen overflow-hidden px-8 sm:px-4">
     <div
-      class="flex flex-col gap-8 justify-start mt-32 sm:mt-40 items-center max-w-4xl mx-auto">
+      class="flex flex-col gap-8 justify-center items-center max-w-4xl mx-auto h-full">
+      <Profile></Profile>
+
+      <span
+        class="text-6xl font-extrabold text-gray-900 dark:text-gray-100 text-center">
+        Software Engineer
+      </span>
+      <p
+        class="text-gray-600 dark:text-gray-400 text-lg text-pretty text-center">
+        Graduating from Mines de Saint-Étienne with a strong interest in
+        software craftsmanship and clean architecture. I design scalable,
+        maintainable systems through well-structured, reliable code.
+      </p>
+
+      <a href="./cv.pdf" target="_blank">
+        <button
+          class="w-full rounded-md flex px-4 py-2 bg-violet-800 text-white hover:bg-violet-900 cursor-pointer shadow text-nowrap">
+          Download resume
+        </button>
+      </a>
+
       <div
         class="flex items-center px-4 py-2 text-sm rounded-full text-gray-800 dark:text-gray-300 border border-gray-800 dark:border-gray-300">
         <svg
@@ -17,36 +37,6 @@
         <span class="text-center">
           Actively seeking a software engineer role starting November 2025.
         </span>
-      </div>
-
-      <Profile></Profile>
-
-      <span
-        class="text-5xl font-semibold text-gray-800 dark:text-gray-100 text-center">
-        Software Engineer
-      </span>
-      <p
-        class="text-gray-600 dark:text-gray-400 text-lg text-pretty font-bold tracking-wider text-center">
-        Graduating from Mines de Saint-Étienne with a strong interest in
-        software craftsmanship and clean architecture. I design scalable,
-        maintainable systems through well-structured, reliable code.
-      </p>
-
-      <div class="flex gap-2 flex-row">
-        <a href="./cv.pdf" target="_blank">
-          <button
-            class="w-full rounded-md flex px-4 py-2 bg-indigo-400 text-white hover:bg-indigo-500 cursor-pointer shadow text-nowrap">
-            My resume
-          </button>
-        </a>
-        <div>
-          <nuxt-link to="/">
-            <button
-              class="w-full rounded-md flex px-4 py-2 text-gray-200 bg-gray-400 dark:bg-gray-600 hover:bg-gray-500 dark:hover:bg-gray-800 cursor-pointer shadow text-nowrap">
-              My projects
-            </button>
-          </nuxt-link>
-        </div>
       </div>
     </div>
   </div>
