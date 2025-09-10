@@ -1,16 +1,27 @@
 [
   {
-    "title": "",
-    "type": "",
-    "techs": "",
-    "description": "",
+    "title": "Radar Positioning System – Kotlin App with RESTful Backend",
+    "techs": ["NestJS", "Kotlin"],
+    "description": "Stay informed of speed cameras around you – anywhere in France. This mobile app lets you locate speed cameras near your current location or anywhere across the country.",
+    "tasks": [
+      "Developed a REST API to fetch the locations of speed cameras across France.",
+      "Built a mobile front-end in Kotlin, integrating Google Maps API to display radar positions on an interactive map.",
+      "Deployed the backend on Clever Cloud for scalable and reliable hosting."
+    ],
     "githubLink": ""
   },
   {
-    "title": "",
-    "type": "",
-    "techs": "",
+    "title": "projet 2",
+    "techs": [],
     "description": "",
+    "tasks": [],
+    "githubLink": ""
+  },
+  {
+    "title": "projet 3",
+    "techs": [],
+    "description": "",
+    "tasks": [],
     "githubLink": ""
   }
 ]
