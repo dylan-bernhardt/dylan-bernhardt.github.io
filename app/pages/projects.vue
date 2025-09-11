@@ -1,16 +1,13 @@
 <template>
   <div
-    class="w-screen max-w-screen min-h-screen bg-white dark:bg-gray-950 pt-40 justify-center flex px-4">
+    class="w-full max-w-full min-h-screen bg-white dark:bg-gray-950 pt-40 pb-8 justify-center flex px-4">
     <div class="flex flex-col max-w-lg lg:max-w-5xl w-full gap-8">
       <span
         class="text-4xl font-extrabold text-gray-900 dark:text-gray-100 text-center">
         My projects
       </span>
-      <div class="w-full h-fit columns-1 lg:columns-2 gap-4">
-        <Project
-          class="my-4 break-inside-avoid-column"
-          v-for="project in projects"
-          :project="project"></Project>
+      <div class="w-full h-fit grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <Project v-for="project in projects" :project="project"></Project>
       </div>
     </div>
   </div>

@@ -22,10 +22,10 @@
     <div
       v-if="showModal"
       @click="showModal = false"
-      class="absolute flex items-center justify-center w-screen h-screen dark:bg-gray-500/30 bg-gray-400/40 top-0 left-0">
+      class="fixed flex items-center justify-center w-screen h-screen dark:bg-gray-500/30 bg-gray-400/40 top-0 left-0">
       <div
         @click="(event) => event.stopPropagation()"
-        class="w-full max-w-lg h-fit flex flex-col p-4 rounded-lg bg-white dark:bg-gray-900 dark:border dark:border-gray-800">
+        class="w-full max-w-lg h-fit flex flex-col p-6 rounded-xl bg-white dark:bg-gray-900 dark:border dark:border-gray-800">
         <div class="w-full flex justify-between items-center">
           <span class="font-semibold text-lg text-gray-800 dark:text-gray-200">
             Tasks

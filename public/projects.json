@@ -1,5 +1,17 @@
 [
   {
+    "title": "Event Communication Platform",
+    "techs": ["Spring Boot", "Angular", "TailwindCSS", "Openshift"],
+    "description": "Completed my final-year engineering internship at Sopra Steria, where I contributed to the full-stack development and deployment of an event communication platform with secure multi-device authentication.",
+    "tasks": [
+      "Full-Stack Development of an Event Communication Platform",
+      "Design and Deployment of a Secure Multi-Device Authentication System",
+      "End-to-End Development and Launch of an Internal Communication Platform",
+      "Internal Event Platform with Secure Authentication and CI/CD Pipeline"
+    ],
+    "githubLink": ""
+  },
+  {
     "title": "Radar Positioning System – Kotlin App with RESTful Backend",
     "techs": ["NestJS", "Kotlin"],
     "description": "Stay informed of speed cameras around you – anywhere in France. This mobile app lets you locate speed cameras near your current location or anywhere across the country.",
@@ -11,17 +23,85 @@
     "githubLink": ""
   },
   {
-    "title": "projet 2",
-    "techs": [],
-    "description": "",
-    "tasks": [],
+    "title": "Belief Propagation algorithm in Side Channel Attacks",
+    "techs": ["Python", "Maths"],
+    "description": "Belief Propagation is an efficient alternative to classical key recovery methods in side-channel attacks. It offers better performance and requires less memory, making it suitable for noisy datasets.",
+    "tasks": [
+      "Gained a deep understanding of the mathematical foundations of the Belief Propagation algorithm",
+      "Applied the algorithm in the context of side-channel attacks for cryptographic key recovery",
+      "Implemented and compared different versions of Belief Propagation in Python to evaluate performance and memory efficiency"
+    ],
     "githubLink": ""
   },
   {
-    "title": "projet 3",
-    "techs": [],
-    "description": "",
-    "tasks": [],
+    "title": "RSA implementation",
+    "techs": ["Java", "Python"],
+    "description": "Implemented RSA encryption from scratch in Java without using any third-party libraries. The project includes key generation, encryption, decryption, and handling of large integers.",
+    "tasks": [
+      "Developed custom functions in Java to handle arithmetic operations on large integers (without third-party libraries)",
+      "Used these functions to implement the complete RSA algorithm, including key generation, encryption, and decryption",
+      "Generated and processed test data in Python to validate the implementation"
+    ],
+    "githubLink": "https://github.com/dylan-bernhardt/rsa-java-implementation"
+  },
+
+  {
+    "title": "Minesweeper",
+    "techs": ["Java", "Swing"],
+    "description": "Developed a multiplayer online Minesweeper desktop application. The game supports real-time network interaction between players, with a graphical user interface and synchronized game state management.",
+    "tasks": [
+      "Developed the core game logic for single-player Minesweeper in Java",
+      "Designed and implemented a user-friendly graphical interface (desktop application)",
+      "Set up a network-based multiplayer mode with real-time synchronization",
+      "Managed player scores and implemented a basic scoring system"
+    ],
+    "githubLink": "https://github.com/dylan-bernhardt/minesweeper"
+  },
+
+  {
+    "title": "OAuth 2.0 Desktop App Library",
+    "techs": [".NET", "ASP.NET", "XUnit.NET", "Microsoft Entra ID"],
+    "description": "Completed a second-year engineering internship at Siemens, where I initiated the design of a library to facilitate OAuth 2.0 migration for desktop applications.",
+    "tasks": [
+      "Initiated the design of a library to facilitate migration to the OAuth 2.0 authorization protocol, specifically tailored for desktop applications.",
+      "Proposed and developed a test application and server to validate and demonstrate the integration of the new protocol.",
+      "Implemented unit testing to ensure code reliability."
+    ],
     "githubLink": ""
+  },
+
+  {
+    "title": "Optimisation Problem",
+    "techs": ["Python"],
+    "description": "Participated in a one-day optimization challenge focused on minimizing the number of guards needed to monitor a room. Worked under time constraints to create a efficient solution.",
+    "tasks": [
+      "Analyzed the geometric structure of the room to identify optimal guard placement",
+      "Implemented a prototype solution within the given time frame",
+      "Collaborated with team members to refine the strategy"
+    ],
+    "githubLink": "https://github.com/dylan-bernhardt/challenge-optimisation"
+  },
+
+  {
+    "title": "Autocompletion algorithm",
+    "techs": ["C"],
+    "description": "Developed an autocomplete algorithm in C as a school project, focusing on optimizing time and space complexity for efficient word suggestions, based on user input.",
+    "tasks": [
+      "Designed the autocomplete solution focusing on efficiency",
+      "Implemented the algorithm in C using appropriate data structures",
+      "Improved the solution through iterative development while collaborating in a pair programming setup"
+    ],
+    "githubLink": "https://github.com/dylan-bernhardt/auto-completion"
+  },
+
+  {
+    "title": "E-Testers",
+    "techs": ["Python", "Pandas", "Numpy"],
+    "description": "Completed a first-year engineering internship at Strataggem, where I developed a solution to automate test bench generation for electronic circuit boards.",
+    "tasks": [
+      "Developed an application with a user interface to automate the design of electronic test benches.",
+      "Analyzed and processed data generated by electronic design software."
+    ],
+    "githubLink": "https://github.com/dylan-bernhardt/auto-completion"
   }
 ]
