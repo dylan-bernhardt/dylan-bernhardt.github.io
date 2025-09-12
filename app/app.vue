@@ -7,7 +7,7 @@
 
 <script setup>
 useHead({
-  title: "Portfolio 🚀",
+  title: "Portfolio",
   htmlAttrs: {
     class: "font-display dark",
   },
