@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-white dark:bg-gray-950 h-screen w-screen max-w-screen overflow-hidden px-8 sm:px-4">
+    class="bg-white dark:bg-black h-screen w-screen max-w-screen overflow-hidden px-8 sm:px-4">
     <div
       class="flex flex-col gap-8 justify-center items-center max-w-4xl mx-auto h-full">
       <Profile></Profile>

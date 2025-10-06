@@ -1,10 +1,10 @@
 <template>
   <button
     @click="toggleTheme()"
-    class="flex p-1 rounded-md hover:bg-gray-300 dark:hover:bg-gray-800 transition-colors">
+    class="group flex p-1.5 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors hover:cursor-pointer">
     <svg
       v-if="isDarkModeEnabled === true"
-      class="w-5 h-5 dark:fill-gray-100"
+      class="w-5 h-5 dark:fill-neutral-700 group-hover:dark:fill-neutral-100 transition-colors"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
@@ -21,7 +21,7 @@
 
     <svg
       v-if="isDarkModeEnabled === false"
-      class="w-5 h-5 fill-gray-800 stroke-gray-800"
+      class="w-5 h-5 fill-neutral-400 group-hover:fill-neutral-900 group-hover:stroke-neutral-900 transition-colors"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">

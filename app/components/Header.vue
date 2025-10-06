@@ -1,66 +1,79 @@
+<script setup>
+const route = useRoute();
+</script>
 <template>
   <div
-    class="flex flex-row border-b border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-950 w-screen py-4 px-8 justify-center">
-    <div class="flex justify-between w-full lg:w-1/2">
-      <div class="flex gap-8">
-        <NuxtLink to="/">
-          <span class="text-gray-800 dark:text-gray-100">Home</span>
-        </NuxtLink>
+    class="flex flex-row bg-white dark:bg-neutral-900 px-8 py-4 justify-between items-center w-full max-w-lg rounded-3xl dark:inset-shadow-xs dark:inset-shadow-neutral-700 shadow-sm dark:shadow-neutral-950 shadow-neutral-300">
+    <div class="flex items-center gap-6">
+      <NuxtLink to="/">
+        <span
+          :class="{
+            'bg-neutral-100 dark:bg-neutral-700': route.name === 'index',
+          }"
+          class="flex items-center justify-center p-1 px-2 rounded-md text-neutral-900 dark:text-neutral-50">
+          Home
+        </span>
+      </NuxtLink>
 
-        <NuxtLink to="/projects">
-          <span class="text-gray-800 dark:text-gray-100">Projects</span>
-        </NuxtLink>
-      </div>
+      <NuxtLink to="/projects">
+        <span
+          :class="{
+            'bg-neutral-100 dark:bg-neutral-700': route.name === 'projects',
+          }"
+          class="flex items-center justify-center p-1 px-2 rounded-md text-neutral-900 dark:text-neutral-50">
+          Projects
+        </span>
+      </NuxtLink>
+    </div>
 
-      <div class="flex gap-4">
-        <ThemeSwitcher></ThemeSwitcher>
+    <div class="flex gap-4">
+      <ThemeSwitcher></ThemeSwitcher>
 
-        <a
-          href="https://github.com/dylan-bernhardt"
-          class="p-1 rounded-md hover:bg-gray-300 dark:hover:bg-gray-800 transition-colors">
-          <svg
-            class="w-5 h-5 fill-gray-800 dark:fill-gray-100"
-            viewBox="0 0 32 32"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg">
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-              <title>github</title>
-              <path
-                d="M16 1.375c-8.282 0-14.996 6.714-14.996 14.996 0 6.585 4.245 12.18 10.148 14.195l0.106 0.031c0.75 0.141 1.025-0.322 1.025-0.721 0-0.356-0.012-1.3-0.019-2.549-4.171 0.905-5.051-2.012-5.051-2.012-0.288-0.925-0.878-1.685-1.653-2.184l-0.016-0.009c-1.358-0.93 0.105-0.911 0.105-0.911 0.987 0.139 1.814 0.718 2.289 1.53l0.008 0.015c0.554 0.995 1.6 1.657 2.801 1.657 0.576 0 1.116-0.152 1.582-0.419l-0.016 0.008c0.072-0.791 0.421-1.489 0.949-2.005l0.001-0.001c-3.33-0.375-6.831-1.665-6.831-7.41-0-0.027-0.001-0.058-0.001-0.089 0-1.521 0.587-2.905 1.547-3.938l-0.003 0.004c-0.203-0.542-0.321-1.168-0.321-1.821 0-0.777 0.166-1.516 0.465-2.182l-0.014 0.034s1.256-0.402 4.124 1.537c1.124-0.321 2.415-0.506 3.749-0.506s2.625 0.185 3.849 0.53l-0.1-0.024c2.849-1.939 4.105-1.537 4.105-1.537 0.285 0.642 0.451 1.39 0.451 2.177 0 0.642-0.11 1.258-0.313 1.83l0.012-0.038c0.953 1.032 1.538 2.416 1.538 3.937 0 0.031-0 0.061-0.001 0.091l0-0.005c0 5.761-3.505 7.029-6.842 7.398 0.632 0.647 1.022 1.532 1.022 2.509 0 0.093-0.004 0.186-0.011 0.278l0.001-0.012c0 2.007-0.019 3.619-0.019 4.106 0 0.394 0.262 0.862 1.031 0.712 6.028-2.029 10.292-7.629 10.292-14.226 0-8.272-6.706-14.977-14.977-14.977-0.006 0-0.013 0-0.019 0h0.001z"></path>
-            </g>
-          </svg>
-        </a>
+      <a
+        href="https://github.com/dylan-bernhardt"
+        class="group p-1.5 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
+        <svg
+          class="w-5 h-5 fill-neutral-400 dark:fill-neutral-700 group-hover:fill-gray-100 transition-colors"
+          viewBox="0 0 32 32"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <title>github</title>
+            <path
+              d="M16 1.375c-8.282 0-14.996 6.714-14.996 14.996 0 6.585 4.245 12.18 10.148 14.195l0.106 0.031c0.75 0.141 1.025-0.322 1.025-0.721 0-0.356-0.012-1.3-0.019-2.549-4.171 0.905-5.051-2.012-5.051-2.012-0.288-0.925-0.878-1.685-1.653-2.184l-0.016-0.009c-1.358-0.93 0.105-0.911 0.105-0.911 0.987 0.139 1.814 0.718 2.289 1.53l0.008 0.015c0.554 0.995 1.6 1.657 2.801 1.657 0.576 0 1.116-0.152 1.582-0.419l-0.016 0.008c0.072-0.791 0.421-1.489 0.949-2.005l0.001-0.001c-3.33-0.375-6.831-1.665-6.831-7.41-0-0.027-0.001-0.058-0.001-0.089 0-1.521 0.587-2.905 1.547-3.938l-0.003 0.004c-0.203-0.542-0.321-1.168-0.321-1.821 0-0.777 0.166-1.516 0.465-2.182l-0.014 0.034s1.256-0.402 4.124 1.537c1.124-0.321 2.415-0.506 3.749-0.506s2.625 0.185 3.849 0.53l-0.1-0.024c2.849-1.939 4.105-1.537 4.105-1.537 0.285 0.642 0.451 1.39 0.451 2.177 0 0.642-0.11 1.258-0.313 1.83l0.012-0.038c0.953 1.032 1.538 2.416 1.538 3.937 0 0.031-0 0.061-0.001 0.091l0-0.005c0 5.761-3.505 7.029-6.842 7.398 0.632 0.647 1.022 1.532 1.022 2.509 0 0.093-0.004 0.186-0.011 0.278l0.001-0.012c0 2.007-0.019 3.619-0.019 4.106 0 0.394 0.262 0.862 1.031 0.712 6.028-2.029 10.292-7.629 10.292-14.226 0-8.272-6.706-14.977-14.977-14.977-0.006 0-0.013 0-0.019 0h0.001z"></path>
+          </g>
+        </svg>
+      </a>
 
-        <a
-          href="https://www.linkedin.com/in/dylan-bernhardt-b5a372251"
-          class="p-1 rounded-md hover:bg-gray-300 dark:hover:bg-gray-800 transition-colors">
-          <svg
-            class="w-5 h-5 fill-gray-800 dark:fill-gray-100"
-            height="200px"
-            width="200px"
-            version="1.1"
-            id="Layer_1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="-143 145 512 512"
-            xml:space="preserve">
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-              <path
-                d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M41.4,508.1H-8.5V348.4h49.9 V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7c18.4,0,29.7,11.9,30.1,27.7 C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4c-14.9,0-23.2,10-27,19.6 c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1c3.3-11,21.2-26.6,49.8-26.6c35.5,0,63.3,23,63.3,72.4V508.1z "></path>
-            </g>
-          </svg>
-        </a>
-      </div>
+      <a
+        href="https://www.linkedin.com/in/dylan-bernhardt-b5a372251"
+        class="group p-1.5 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
+        <svg
+          class="w-5 h-5 fill-neutral-400 dark:fill-neutral-700 group-hover:fill-gray-100 transition-colors"
+          height="200px"
+          width="200px"
+          version="1.1"
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="-143 145 512 512"
+          xml:space="preserve">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M41.4,508.1H-8.5V348.4h49.9 V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7c18.4,0,29.7,11.9,30.1,27.7 C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4c-14.9,0-23.2,10-27,19.6 c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1c3.3-11,21.2-26.6,49.8-26.6c35.5,0,63.3,23,63.3,72.4V508.1z "></path>
+          </g>
+        </svg>
+      </a>
     </div>
   </div>
 </template>
