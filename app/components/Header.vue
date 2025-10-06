@@ -3,12 +3,12 @@ const route = useRoute();
 </script>
 <template>
   <div
-    class="flex flex-row bg-white dark:bg-neutral-900 px-8 py-4 justify-between items-center w-full max-w-lg rounded-3xl dark:inset-shadow-xs dark:inset-shadow-neutral-700 shadow-sm dark:shadow-neutral-950 shadow-neutral-300">
+    class="flex flex-row bg-neutral-100 dark:bg-neutral-900 px-8 py-4 justify-between items-center w-full max-w-lg rounded-3xl dark:inset-shadow-xs dark:inset-shadow-neutral-700 shadow-sm dark:shadow-neutral-950 shadow-neutral-300">
     <div class="flex items-center gap-6">
       <NuxtLink to="/">
         <span
           :class="{
-            'bg-neutral-100 dark:bg-neutral-700': route.name === 'index',
+            'bg-neutral-200 dark:bg-neutral-700': route.name === 'index',
           }"
           class="flex items-center justify-center p-1 px-2 rounded-md text-neutral-900 dark:text-neutral-50">
           Home
@@ -18,7 +18,7 @@ const route = useRoute();
       <NuxtLink to="/projects">
         <span
           :class="{
-            'bg-neutral-100 dark:bg-neutral-700': route.name === 'projects',
+            'bg-neutral-200 dark:bg-neutral-700': route.name === 'projects',
           }"
           class="flex items-center justify-center p-1 px-2 rounded-md text-neutral-900 dark:text-neutral-50">
           Projects
@@ -33,7 +33,7 @@ const route = useRoute();
         href="https://github.com/dylan-bernhardt"
         class="group p-1.5 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
         <svg
-          class="w-5 h-5 fill-neutral-400 dark:fill-neutral-700 group-hover:fill-gray-100 transition-colors"
+          class="w-5 h-5 fill-neutral-400 dark:fill-neutral-700 group-hover:fill-neutral-900 group-hover:dark:fill-gray-100 transition-colors"
           viewBox="0 0 32 32"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +54,7 @@ const route = useRoute();
         href="https://www.linkedin.com/in/dylan-bernhardt-b5a372251"
         class="group p-1.5 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
         <svg
-          class="w-5 h-5 fill-neutral-400 dark:fill-neutral-700 group-hover:fill-gray-100 transition-colors"
+          class="w-5 h-5 fill-neutral-400 dark:fill-neutral-700 group-hover:fill-neutral-900 group-hover:dark:fill-gray-100 transition-colors"
           height="200px"
           width="200px"
           version="1.1"
