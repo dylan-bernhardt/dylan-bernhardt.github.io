@@ -4,10 +4,7 @@
     <span class="dark:text-white mt-44 mb-12 text-6xl font-bold">
       My projects
     </span>
-    <Project
-      v-for="project in projects"
-      class="col-span-2"
-      :project="project"></Project>
+    <Project v-for="project in projects" :project="project"></Project>
   </div>
 </template>
 
