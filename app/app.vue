@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header class="fixed top-6 left-[50%] -translate-x-[50%]" />
+    <Header class="fixed z-50 top-6 left-[50%] -translate-x-[50%]" />
     <NuxtPage />
   </div>
 </template>

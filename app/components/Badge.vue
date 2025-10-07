@@ -1,6 +1,6 @@
 <template>
   <span
-    class="w-fit bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-purple-900 dark:text-purple-300">
+    class="w-fit bg-neutral-200 dark:bg-neutral-700 text-neutral-900 dark:text-neutral-100 text-sm font-medium px-3 py-1 rounded-md text-nowrap">
     {{ props.name }}
   </span>
 </template>

@@ -1,12 +1,13 @@
 <template>
   <div
-    class="bg-neutral-200 dark:bg-black min-h-screen w-full max-w-screen flex flex-col items-center overflow-hidden px-8 sm:px-4">
+    class="pb-12 bg-neutral-200 dark:bg-black min-h-screen w-full max-w-screen flex flex-col items-center overflow-hidden px-8 sm:px-4 gap-4">
     <span class="dark:text-white mt-44 mb-12 text-6xl font-bold">
       My projects
     </span>
-    <div class="w-full max-w-4xl h-fit grid grid-cols-1 lg:grid-cols-2 gap-4">
-      <Project v-for="project in projects" :project="project"></Project>
-    </div>
+    <Project
+      v-for="project in projects"
+      class="col-span-2"
+      :project="project"></Project>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ interface Project {
   description: string;
   tasks: string[];
   githubLink: string;
+  image: string;
 }
 
 const projects: Ref<Project[]> = ref([]);

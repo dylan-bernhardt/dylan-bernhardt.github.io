@@ -1,29 +1,74 @@
 <template>
   <div
-    class="p-4 rounded-md border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 shadow flex flex-col gap-2">
-    <span class="font-semibold text-gray-800 dark:text-gray-200">
-      {{ project.title }}
-    </span>
-    <div class="flex gap-1">
+    class="w-full max-w-4xl grid gap-4 grid-cols-3 bg-neutral-100 dark:bg-neutral-900 p-12 rounded-4xl">
+    <div
+      class="col-span-3 flex items-center justify-center bg-linear-to-br from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 p-8 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950">
+      <span
+        class="text-2xl font-extrabold text-neutral-900 dark:text-neutral-100 text-center">
+        {{ project.title }}
+      </span>
+    </div>
+
+    <div
+      class="col-span-2 flex items-center justify-center bg-linear-to-br from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 p-8 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950">
+      <p class="text-neutral-500 dark:text-neutral-300 text-base">
+        {{ project.description }}
+      </p>
+    </div>
+
+    <div
+      class="flex flex-col gap-2 bg-linear-to-bl from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950 overflow-hidden">
+      <NuxtImg
+        class="w-full h-auto object-cover"
+        :src="project.image"></NuxtImg>
+    </div>
+
+    <div
+      class="flex flex-wrap gap-2 items-center justify-center bg-linear-to-br from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 p-4 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950">
       <Badge v-for="tech in project.techs" :name="tech"></Badge>
     </div>
-    <p class="text-sm text-gray-800 dark:text-gray-400">
-      {{ project.description }}
-    </p>
 
-    <div class="w-full flex justify-center mt-2 gap-2">
+    <div
+      class="col-span-2 flex gap-4 items-center justify-center bg-linear-to-br from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 p-8 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950">
+      <span
+        class="text-2xl font-extrabold text-neutral-400 dark:text-neutral-500 text-center">
+        Want more info ?
+      </span>
+
       <button
         @click="showModal = true"
-        class="bg-violet-800 text-white font-medium text-sm py-1 px-2 rounded-md cursor-pointer hover:bg-violet-900">
-        See more
+        class="group relative flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 dark:bg-neutral-100 px-6 font-medium text-neutral-200 dark:text-neutral-900 duration-500 cursor-pointer">
+        <div
+          class="translate-x-0 opacity-100 transition group-hover:-translate-x-[150%] group-hover:opacity-0">
+          Show details
+        </div>
+        <div
+          class="absolute translate-x-[150%] opacity-0 transition group-hover:translate-x-0 group-hover:opacity-100">
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6">
+            <path
+              d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+              clip-rule="evenodd"></path>
+          </svg>
+        </div>
       </button>
 
-      <NuxtLink :to="project.githubLink" target="_blank">
+      <NuxtLink
+        v-if="project.githubLink !== ''"
+        :to="project.githubLink"
+        target="_blank">
         <button
           v-if="project.githubLink !== ''"
-          class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-medium text-sm p-1 rounded-md cursor-pointer dark:hover:bg-gray-700 hover:bg-gray-200">
+          class="flex items-center justify-center rounded-md bg-neutral-950 dark:bg-neutral-100 p-1 h-12 w-12 cursor-pointer">
           <svg
-            class="w-5 h-5 fill-gray-800 dark:fill-gray-100"
+            class="w-5 h-5 fill-neutral-200 dark:fill-neutral-900"
             viewBox="0 0 32 32"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg">
@@ -41,58 +86,58 @@
         </button>
       </NuxtLink>
     </div>
+  </div>
 
+  <div
+    v-if="showModal"
+    @click="showModal = false"
+    class="fixed flex items-center justify-center w-screen h-screen dark:bg-gray-500/30 bg-gray-400/40 top-0 left-0">
     <div
-      v-if="showModal"
-      @click="showModal = false"
-      class="fixed flex items-center justify-center w-screen h-screen dark:bg-gray-500/30 bg-gray-400/40 top-0 left-0">
+      @click="(event) => event.stopPropagation()"
+      class="w-full max-w-lg h-fit flex flex-col p-6 rounded-xl bg-white dark:bg-gray-900 dark:border dark:border-gray-800">
+      <div class="w-full flex justify-between items-center">
+        <span class="font-semibold text-lg text-gray-800 dark:text-gray-200">
+          Tasks
+        </span>
+        <button
+          @click="showModal = false"
+          class="rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer">
+          <svg
+            class="w-7 h-7 fill-gray-800 dark:fill-gray-600"
+            viewBox="0 -0.5 25 25"
+            xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M6.96967 16.4697C6.67678 16.7626 6.67678 17.2374 6.96967 17.5303C7.26256 17.8232 7.73744 17.8232 8.03033 17.5303L6.96967 16.4697ZM13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697L13.0303 12.5303ZM11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303L11.9697 11.4697ZM18.0303 7.53033C18.3232 7.23744 18.3232 6.76256 18.0303 6.46967C17.7374 6.17678 17.2626 6.17678 16.9697 6.46967L18.0303 7.53033ZM13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303L13.0303 11.4697ZM16.9697 17.5303C17.2626 17.8232 17.7374 17.8232 18.0303 17.5303C18.3232 17.2374 18.3232 16.7626 18.0303 16.4697L16.9697 17.5303ZM11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697L11.9697 12.5303ZM8.03033 6.46967C7.73744 6.17678 7.26256 6.17678 6.96967 6.46967C6.67678 6.76256 6.67678 7.23744 6.96967 7.53033L8.03033 6.46967ZM8.03033 17.5303L13.0303 12.5303L11.9697 11.4697L6.96967 16.4697L8.03033 17.5303ZM13.0303 12.5303L18.0303 7.53033L16.9697 6.46967L11.9697 11.4697L13.0303 12.5303ZM11.9697 12.5303L16.9697 17.5303L18.0303 16.4697L13.0303 11.4697L11.9697 12.5303ZM13.0303 11.4697L8.03033 6.46967L6.96967 7.53033L11.9697 12.5303L13.0303 11.4697Z"></path>
+            </g>
+          </svg>
+        </button>
+      </div>
       <div
-        @click="(event) => event.stopPropagation()"
-        class="w-full max-w-lg h-fit flex flex-col p-6 rounded-xl bg-white dark:bg-gray-900 dark:border dark:border-gray-800">
-        <div class="w-full flex justify-between items-center">
-          <span class="font-semibold text-lg text-gray-800 dark:text-gray-200">
-            Tasks
-          </span>
-          <button
-            @click="showModal = false"
-            class="rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer">
-            <svg
-              class="w-7 h-7 fill-gray-800 dark:fill-gray-600"
-              viewBox="0 -0.5 25 25"
-              xmlns="http://www.w3.org/2000/svg">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M6.96967 16.4697C6.67678 16.7626 6.67678 17.2374 6.96967 17.5303C7.26256 17.8232 7.73744 17.8232 8.03033 17.5303L6.96967 16.4697ZM13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697L13.0303 12.5303ZM11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303L11.9697 11.4697ZM18.0303 7.53033C18.3232 7.23744 18.3232 6.76256 18.0303 6.46967C17.7374 6.17678 17.2626 6.17678 16.9697 6.46967L18.0303 7.53033ZM13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303L13.0303 11.4697ZM16.9697 17.5303C17.2626 17.8232 17.7374 17.8232 18.0303 17.5303C18.3232 17.2374 18.3232 16.7626 18.0303 16.4697L16.9697 17.5303ZM11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697L11.9697 12.5303ZM8.03033 6.46967C7.73744 6.17678 7.26256 6.17678 6.96967 6.46967C6.67678 6.76256 6.67678 7.23744 6.96967 7.53033L8.03033 6.46967ZM8.03033 17.5303L13.0303 12.5303L11.9697 11.4697L6.96967 16.4697L8.03033 17.5303ZM13.0303 12.5303L18.0303 7.53033L16.9697 6.46967L11.9697 11.4697L13.0303 12.5303ZM11.9697 12.5303L16.9697 17.5303L18.0303 16.4697L13.0303 11.4697L11.9697 12.5303ZM13.0303 11.4697L8.03033 6.46967L6.96967 7.53033L11.9697 12.5303L13.0303 11.4697Z"></path>
-              </g>
-            </svg>
-          </button>
-        </div>
+        class="flex flex-col gap-3 mt-2 text-gray-600 dark:text-gray-500 px-6">
         <div
-          class="flex flex-col gap-3 mt-2 text-gray-600 dark:text-gray-500 px-6">
-          <div
-            class="flex items-center gap-2 w-full"
-            v-for="task in project.tasks">
-            <svg
-              class="w-6 min-w-6 h-6 fill-gray-600 dark:fill-gray-500"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z"></path>
-              </g>
-            </svg>
-            <p class="text-sm">{{ task }}</p>
-          </div>
+          class="flex items-center gap-2 w-full"
+          v-for="task in project.tasks">
+          <svg
+            class="w-6 min-w-6 h-6 fill-gray-600 dark:fill-gray-500"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z"></path>
+            </g>
+          </svg>
+          <p class="text-sm">{{ task }}</p>
         </div>
       </div>
     </div>
@@ -108,6 +153,7 @@ interface Project {
   description: string;
   tasks: string[];
   githubLink: string;
+  image: string;
 }
 
 interface Props {
