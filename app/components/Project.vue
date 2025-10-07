@@ -20,7 +20,7 @@
       class="flex flex-col gap-2 bg-linear-to-bl from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950 overflow-hidden">
       <NuxtImg
         class="w-full h-auto object-cover"
-        src="./cyberattack.png"></NuxtImg>
+        :src="project.image"></NuxtImg>
     </div>
 
     <div
