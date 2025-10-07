@@ -7,7 +7,7 @@
 
 <script setup>
 useHead({
-  title: "Portfolio",
+  title: "Dylan Bernhardt",
   htmlAttrs: {
     class: "font-display dark",
   },
