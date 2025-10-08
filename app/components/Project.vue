@@ -92,7 +92,7 @@
   <div
     v-if="showModal"
     @click="showModal = false"
-    class="fixed flex items-center justify-center w-screen h-screen dark:bg-gray-500/30 bg-gray-400/40 top-0 left-0">
+    class="z-50 fixed flex items-center justify-center w-screen h-screen dark:bg-neutral-900/50 backdrop-blur-lg bg-neutral-300/50 top-0 left-0">
     <div
       @click="(event) => event.stopPropagation()"
       class="w-full max-w-lg h-fit flex flex-col p-6 rounded-xl bg-white dark:bg-gray-900 dark:border dark:border-gray-800">
