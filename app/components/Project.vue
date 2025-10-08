@@ -95,7 +95,7 @@
     class="z-50 fixed flex items-center justify-center w-screen h-screen dark:bg-neutral-900/50 backdrop-blur-lg bg-neutral-300/50 top-0 left-0">
     <div
       @click="(event) => event.stopPropagation()"
-      class="m-4 w-full max-w-lg h-fit flex flex-col rounded-3xl bg-neutral-100 dark:bg-neutral-800 shadow-lg shadow-neutral-500 dark:shadow-neutral-950 overflow-hidden">
+      class="m-4 w-full max-w-lg h-fit flex flex-col rounded-3xl bg-neutral-100/80 dark:bg-neutral-800/80 shadow-lg shadow-neutral-500 dark:shadow-neutral-950 overflow-hidden">
       <div class="px-8 py-5 w-full flex justify-between items-center bg-neutral-200 dark:bg-neutral-700">
         <span class="text-xl text-neutral-500 dark:text-neutral-400">
           More details
