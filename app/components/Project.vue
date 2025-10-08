@@ -30,7 +30,7 @@
     </div>
 
     <div
-      class="col-span-2 flex gap-4 items-center justify-center bg-linear-to-br from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 p-8 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950">
+      class="col-span-2 flex gap-6 items-center justify-center bg-linear-to-br from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 p-8 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950">
       <span
         class="text-2xl font-extrabold text-neutral-400 dark:text-neutral-500 text-center">
         Want more info ?
@@ -95,16 +95,16 @@
     class="z-50 fixed flex items-center justify-center w-screen h-screen dark:bg-neutral-900/50 backdrop-blur-lg bg-neutral-300/50 top-0 left-0">
     <div
       @click="(event) => event.stopPropagation()"
-      class="w-full max-w-lg h-fit flex flex-col p-6 rounded-xl bg-white dark:bg-gray-900 dark:border dark:border-gray-800">
-      <div class="w-full flex justify-between items-center">
-        <span class="font-semibold text-lg text-gray-800 dark:text-gray-200">
-          Tasks
+      class="m-4 w-full max-w-lg h-fit flex flex-col rounded-3xl bg-neutral-100 dark:bg-neutral-800 shadow-lg shadow-neutral-500 dark:shadow-neutral-950 overflow-hidden">
+      <div class="px-8 py-5 w-full flex justify-between items-center bg-neutral-200 dark:bg-neutral-700">
+        <span class="text-xl text-neutral-500 dark:text-neutral-400">
+          More details
         </span>
         <button
           @click="showModal = false"
-          class="rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer">
+          class="rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-600 cursor-pointer transition-colors">
           <svg
-            class="w-7 h-7 fill-gray-800 dark:fill-gray-600"
+            class="w-7 h-7 fill-neutral-500 dark:fill-neutral-400"
             viewBox="0 -0.5 25 25"
             xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -120,12 +120,12 @@
         </button>
       </div>
       <div
-        class="flex flex-col gap-3 mt-2 text-gray-600 dark:text-gray-500 px-6">
+        class="flex flex-col gap-3 text-neutral-900 dark:text-neutral-100 p-8">
         <div
           class="flex items-center gap-2 w-full"
           v-for="task in project.tasks">
           <svg
-            class="w-6 min-w-6 h-6 fill-gray-600 dark:fill-gray-500"
+            class="w-6 min-w-6 h-6 fill-neutral-900 dark:fill-neutral-100"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -138,7 +138,7 @@
                 d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z"></path>
             </g>
           </svg>
-          <p class="text-sm">{{ task }}</p>
+          <p class="text-base">{{ task }}</p>
         </div>
       </div>
     </div>
