@@ -5,12 +5,12 @@
       Who am I ?
     </span>
     <div
-      class="w-full max-w-4xl grid gap-4 grid-flow-row grid-cols-3 grid-rows-3 bg-neutral-100 dark:bg-neutral-900 p-12 rounded-4xl">
+      class="w-full max-w-4xl lg:grid flex flex-row flex-wrap justify-center gap-4 grid-flow-row grid-cols-3 grid-rows-3 bg-neutral-100 dark:bg-neutral-900 lg:p-12 p-8 rounded-4xl">
       <Profile></Profile>
       <div
         class="col-span-2 flex items-center justify-center bg-linear-to-br from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 p-8 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950">
         <span
-          class="text-5xl font-extrabold text-neutral-900 dark:text-neutral-100 text-center">
+          class="text-4xl sm:text-5xl font-extrabold text-neutral-900 dark:text-neutral-100 text-center">
           Software Engineer
         </span>
       </div>
@@ -44,7 +44,7 @@
       </div>
 
       <div
-        class="col-span-2 flex gap-8 items-center justify-center bg-linear-to-br from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 p-8 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950">
+        class="col-span-2 flex flex-col sm:flex-row gap-2 sm:gap-8 items-center justify-center bg-linear-to-br from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 p-8 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950">
         <span
           class="text-2xl font-extrabold text-neutral-400 dark:text-neutral-500 text-center">
           Want more info ?
@@ -80,7 +80,7 @@
       </div>
     </div>
 
-    <span class="dark:text-white mt-32 mb-12 text-6xl font-bold">
+    <span class="dark:text-white mt-32 mb-12 text-6xl font-bold text-center">
       Wanna see some projects ?
     </span>
 

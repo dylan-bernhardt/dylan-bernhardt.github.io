@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-row gap-4 items-center bg-linear-to-br from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 p-8 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950">
+    class="flex flex-row gap-4 items-center justify-center bg-linear-to-br from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 p-8 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950">
     <div
       class="rounded-full overflow-hidden w-16 h-16 flex items-center justify-center">
       <NuxtImg class="w-full h-full" src="./me.jpg" alt="" />
