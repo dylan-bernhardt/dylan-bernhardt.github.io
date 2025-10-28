@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full max-w-4xl grid gap-4 grid-cols-3 bg-neutral-100 dark:bg-neutral-900 p-12 rounded-4xl">
+    class="w-full max-w-4xl lg:grid flex flex-row flex-wrap items-center justify-center gap-4 grid-cols-3 bg-neutral-100 dark:bg-neutral-900 p-12 rounded-4xl">
     <div
       class="col-span-3 flex items-center justify-center bg-linear-to-br from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 p-8 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950">
       <span
@@ -19,18 +19,18 @@
     <div
       class="flex flex-col gap-2 bg-linear-to-bl from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950 overflow-hidden">
       <img
-        class="w-full h-auto object-cover"
+        class="max-w-md w-full h-auto object-cover"
         :src="project.image"
         ></img>
     </div>
 
     <div
-      class="flex flex-wrap gap-2 items-center justify-center bg-linear-to-br from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 p-4 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950">
+      class="flex flex-wrap gap-2 lg:h-full h-fit items-center justify-center bg-linear-to-br from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 p-4 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950">
       <Badge v-for="tech in project.techs" :name="tech"></Badge>
     </div>
 
     <div
-      class="col-span-2 flex gap-6 items-center justify-center bg-linear-to-br from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 p-8 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950">
+      class="col-span-2 flex flex-col sm:flex-row gap-6 items-center justify-center bg-linear-to-br from-white to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 p-8 rounded-3xl dark:inset-shadow-sm dark:inset-shadow-neutral-700 shadow-md dark:shadow-neutral-950">
       <span
         class="text-2xl font-extrabold text-neutral-400 dark:text-neutral-500 text-center">
         Want more info ?
