@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-neutral-200 dark:bg-black min-h-screen w-full max-w-screen flex flex-col items-center overflow-hidden px-8 sm:px-4">
+    class="bg-neutral-200 dark:bg-black min-h-screen w-full max-w-screen flex flex-col items-center overflow-hidden px-4">
     <span class="dark:text-white mt-44 mb-12 text-6xl font-bold">
       Who am I ?
     </span>
